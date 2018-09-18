@@ -33,24 +33,14 @@ export class HomePage {
                 };
    var url = "http://10.171.171.95:8080/receipt-recognition/api/v1/recognition/image/hackathon";
    const fileTransfer: TransferObject = this.transfer.create();
-   fileTransfer.upload(imageData, url, options).then(response => {
-              console.log('response:' + JSON.stringify(response));
-              //console.log(response.data.response.request_id);
+   fileTransfer.upload(imageData, url, options).then(data => {
+              console.log('response:' + JSON.stringify(data));
+              //console.log(data.response.request_id);
             }, err => {
             console.log('uploading error');
             console.log(JSON.stringify(err));
             });
    console.log('uploading is done....');
-  
-  var url1 = "http://10.171.171.95:8080/receipt-recognition/api/v1/recognition/document/";
-  console.log('url1:' + url1);
-  this.http.get(url1,{  
-    params: {  
-        "request_id":"MTI2N2FiYzItZTdlMy00ZWU2LTkzMjgtMzM0MWQ2MjJkNzE0LyJvY3JUcmFuc2xhdGVkVGV4dC50eHQi"  
-    }  
-}).subscribe(response =>{  
-      console.log(response);
-})  
 }, (err) => {
    // Handle error
    console.log("there is an error");
