@@ -11,6 +11,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { Camera } from '@ionic-native/camera';
+
+import { File } from '@ionic-native/file';
+import { Transfer, TransferObject} from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
+import { HttpModule  } from '@angular/http';
+
+import {SpeechRecognition} from '@ionic-native/speech-recognition'; 
 @NgModule({
   declarations: [
     MyApp,
@@ -21,6 +29,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -32,9 +41,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage
   ],
   providers: [
+    Camera,
     StatusBar,
     SplashScreen,
+    File,
+    Transfer,
+    FilePath,
+    SpeechRecognition,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+
+export class AppModule {
+
+}
