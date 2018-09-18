@@ -4,15 +4,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="home">
+<ion-content padding>
   <h2>Welcome to Receipt Recognition!</h2>
   <br>
   <h3>
     Please upload your image ^_^
   </h3>
   <button ion-button (click)="takePicture()">upload</button>
-  Latest Picture: {{base64Image}}
-  <img [src]="base64Image" *ngIf="base64Image"/>
+  <h4>{{imageText}}</h4>
   <button ion-button (click)="speechIt()">Speech It</button> 
 
 </ion-content>

@@ -19,6 +19,7 @@ import { FilePath } from '@ionic-native/file-path';
 import { HttpModule  } from '@angular/http';
 
 import {SpeechRecognition} from '@ionic-native/speech-recognition'; 
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 @NgModule({
   declarations: [
     MyApp,
@@ -47,7 +48,8 @@ import {SpeechRecognition} from '@ionic-native/speech-recognition';
     File,
     Transfer,
     FilePath,
-    SpeechRecognition,
+    SpeechRecognition, 
+    TextToSpeech,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
